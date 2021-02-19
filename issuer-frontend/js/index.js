@@ -1,5 +1,5 @@
-const BUTTON = "<a href=\"<url>\" class=\"btn btn-primary btn-sm active\" role=\"button\" aria-pressed=\"true\">View</a>";
-const IMG_PREVIEW = "<img src=\"<url>\" height=\"70\" width=\"50\">"
+const BUTTON = "<a href=\"<url>\" class=\"btn btn-primary btn-sm active\" role=\"button\" aria-pressed=\"true\">Sign Document</a>";
+const IMG_PREVIEW = "<img src=\"<url>\" height=\"70\" width=\"50\" class=\"img-thumbnail\">"
 
 function loadDocuments () {
     const request = new XMLHttpRequest();
@@ -27,7 +27,6 @@ function populateTable(json) {
         tableBody.removeChild(tableBody.firstChild);
     }
 
-
     json.forEach(element => {
         const tr = document.createElement("tr");
         
@@ -47,10 +46,16 @@ function populateTable(json) {
         tdPreview.innerHTML = IMG_PREVIEW.replace("<url>", element.preview);
         tdButton.classList.add("align-middle");
 
+        tdButton.addEventListener("click", function(event){
+            var targetElement = event.target;
+            console.log(element);
+            localStorage.setItem("selected_doc", element.preview);
+        });
+
         tr.appendChild(tdId);
         tr.appendChild(tdName);
-        tr.appendChild(tdButton);
         tr.appendChild(tdPreview);
+        tr.appendChild(tdButton);
 
         tableBody.appendChild(tr);
     });
