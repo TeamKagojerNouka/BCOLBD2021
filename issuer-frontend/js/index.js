@@ -1,5 +1,5 @@
 const BUTTON = "<a href=\"<url>\" class=\"btn btn-primary btn-sm active\" role=\"button\" aria-pressed=\"true\">Sign Document</a>";
-const IMG_PREVIEW = "<img src=\"<url>\" height=\"70\" width=\"50\" class=\"img-thumbnail\">"
+const IMG_PREVIEW = "<img src=\"<url>\" height=\"100\" width=\"80\" class=\"img-thumbnail\">"
 
 function loadDocuments () {
     const request = new XMLHttpRequest();
@@ -44,7 +44,11 @@ function populateTable(json) {
 
         const tdPreview = document.createElement("td");
         tdPreview.innerHTML = IMG_PREVIEW.replace("<url>", element.preview);
-        tdButton.classList.add("align-middle");
+        tdPreview.classList.add("align-middle");
+
+        const tdDate = document.createElement("td");
+        tdDate.textContent = element.date;
+        tdDate.classList.add("align-middle");
 
         tdButton.addEventListener("click", function(event){
             var targetElement = event.target;
@@ -54,9 +58,10 @@ function populateTable(json) {
 
         tr.appendChild(tdId);
         tr.appendChild(tdName);
+        tr.appendChild(tdDate);
         tr.appendChild(tdPreview);
         tr.appendChild(tdButton);
-
+        
         tableBody.appendChild(tr);
     });
     
