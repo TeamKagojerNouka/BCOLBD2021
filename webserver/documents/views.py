@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from rest_framework.generics import ListAPIView
+from rest_framework.permissions import AllowAny
+from .models import Document
+from .serializers import DocumentSerializer
 
-# Create your views here.
+
+class DocumentListAPIView(ListAPIView):
+    queryset = Document.objects.all()
+    serializer_class = DocumentSerializer
+    permission_classes = (AllowAny, )
