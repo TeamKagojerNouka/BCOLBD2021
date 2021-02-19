@@ -1,7 +1,12 @@
 function readStorage() {
     var imageurl = localStorage.getItem("selected_doc");
-    document.getElementById("doc-img").src = (imageurl);
-    console.log(imageurl)
+    const obj = JSON.parse(imageurl);
+    document.getElementById("doc-img").src = obj.preview;
+    document.getElementById("doc-date").textContent = obj.date;
+    document.getElementById("doc-name").textContent = obj.name;
+    
+    
+    console.log(obj)
 }
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -53,7 +53,7 @@ function populateTable(json) {
         tdButton.addEventListener("click", function(event){
             var targetElement = event.target;
             console.log(element);
-            localStorage.setItem("selected_doc", element.preview);
+            localStorage.setItem("selected_doc", JSON.stringify(element));
         });
 
         tr.appendChild(tdId);
