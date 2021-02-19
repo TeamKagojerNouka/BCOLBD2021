@@ -6,3 +6,8 @@
 .table-dark {
     background-color: #222222;
 }
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #222222;
+    border-color: #222222;
+}
