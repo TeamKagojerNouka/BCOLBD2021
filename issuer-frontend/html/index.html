@@ -5,9 +5,8 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" href="../css/base.css">
 		<link rel="stylesheet" href="../css/index.css">
 		<title>Issuer</title>
@@ -15,15 +14,26 @@
 	<body>
 		<div>
 			<h1 class="site-header"><B>Issuer Document List<B></h1>
-		</div>  
+		</div>
 		<table id="docs-table" class="table table-hover text-center">
 			<thead class="table-dark">
 				<tr>
-					<th scope="col">ID</th>
-					<th scope="col">Name</th>
-					<th scope="col">Date</th>
-					<th scope="col">Preview</th>
-					<th scope="col"></th>
+					<th scope="col" class="align-middle">ID</th>
+					<th scope="col" class="align-middle">Name</th>
+					<th scope="col" class="align-middle">Date</th>
+					<th scope="col" class="align-middle">Preview</th>
+          <th scope="col" class="align-middle">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-menu-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Filter By
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdown-menu-button" id="dropdown-menu">
+                <!-- <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Other Action</a> -->
+              </div>
+            </div>  
+          </th>
 				</tr>
 			</thead>
 			<tbody>

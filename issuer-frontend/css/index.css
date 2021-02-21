@@ -7,3 +7,22 @@
     background-color: #222222;
     border-color: #222222;
 }
+.btn-secondary {
+    background-color: #222222;
+}
+.dropdown {
+    float: right;
+}
+.dropdown-menu {
+    margin-right: 30%;
+}
+.dropdown-item {
+    font-weight: bold;
+    padding: 12px 12px;
+    text-align: left;
+    font-size: small;
+} 
+.dropdown-item:active {
+    color: #fff;
+    background-color: #222222;
+}

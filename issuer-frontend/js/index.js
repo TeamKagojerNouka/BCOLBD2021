@@ -1,5 +1,6 @@
 const BUTTON = "<a href=\"<url>\" class=\"btn btn-primary btn-sm active\" role=\"button\" aria-pressed=\"true\">Sign Document</a>";
 const IMG_PREVIEW = "<img src=\"<url>\" height=\"100\" width=\"80\" class=\"img-thumbnail\">"
+const FILTER_ITEM = "<a class=\"dropdown-item\" href=\"#\"><text></a>"
 
 function loadDocuments () {
     const request = new XMLHttpRequest();
@@ -67,6 +68,37 @@ function populateTable(json) {
     
 }
 
+function loadFilters() {
+    const request = new XMLHttpRequest();
+
+    request.open("get", "../data/filters.json");
+    request.onload = () => {
+        try {
+            const json = JSON.parse(request.responseText);
+            populateFilterDropdown(json);
+        }
+        catch(e) {
+            console.warn("Could not fetch data !!");
+        }
+    };
+
+    request.send();
+}
+
+function populateFilterDropdown(json) {
+    
+    const menu = document.querySelector("#dropdown-menu");
+    
+    let innerHTML = "";
+    json.forEach(element => {
+        const item = FILTER_ITEM.replace("<text>", element.name)
+        innerHTML += item;
+    });
+
+    menu.innerHTML = innerHTML;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     loadDocuments();
+    loadFilters();
 })

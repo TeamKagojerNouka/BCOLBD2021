@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Location: Dhaka"
+    },
+    {
+        "id": 2,
+        "name": "Location: Chittagong"
+    },
+    {
+        "id": 3,
+        "name": "Status: A"
+    },
+    {
+        "id": 4,
+        "name": "Status: B"
+    },
+    {
+        "id": 5,
+        "name": "Status: C"
+    }
+]
