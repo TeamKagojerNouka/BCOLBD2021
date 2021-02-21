@@ -1,39 +1,39 @@
 .btn-primary {
-    color: #fff;
-    background-color: #222222;
-    border-color: whitesmoke;
+  color: #fff;
+  background-color: #222222;
+  border-color: whitesmoke;
 }
 .btn-primary:hover {
-    color: #fff;
-    background-color: green;
-    border-color: whitesmoke;
+  color: #fff;
+  background-color: green;
+  border-color: whitesmoke;
 }
 #doc-img {
-    margin-top: 3%;
-    margin-bottom: 3%;
-    margin-left: 25%;
-    border: 10px solid #e3e5e8;
-    padding: 25px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: 25%;
+  border: 10px solid #e3e5e8;
+  padding: 25px;
 }
 .card {
     margin-top: 15%;
     margin-left: 20%;
 }
 .card-img-top {
-    margin-left: 6%;
-    width: 15%;
+  margin-left: 6%;
+  width: 15%;
 }
 
 .progress-bar {
-    background-color: honeydew;
-    height: 32px;
-    width: 100%;
-    margin: 10px 0;
-    border-radius: 5px;
-    padding: 1px;
-    /*box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;*/
-    display: none;
-  }
+  background-color: honeydew;
+  height: 32px;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 1px;
+  /*box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;*/
+  display: none;
+}
 
 .progress-bar span {
   display: inline-block;
@@ -61,12 +61,12 @@
 
 
 @keyframes animate-stripes {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 60px 0;
-    }
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 60px 0;
+  }
 }
 
 @keyframes animate-glow {
@@ -85,11 +85,11 @@
 }
 
 .loader {
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid green;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    animation: spin 2s linear infinite;
-    display: none;
-  }
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid green;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 2s linear infinite;
+  display: none;
+}
