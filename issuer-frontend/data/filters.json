@@ -9,14 +9,10 @@
     },
     {
         "id": 3,
-        "name": "Status: A"
+        "name": "State: A"
     },
     {
         "id": 4,
-        "name": "Status: B"
-    },
-    {
-        "id": 5,
-        "name": "Status: C"
+        "name": "State: B"
     }
 ]

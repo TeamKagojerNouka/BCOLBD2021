@@ -1,6 +1,5 @@
 const BUTTON = "<a href=\"<url>\" class=\"btn btn-primary btn-sm active\" role=\"button\" aria-pressed=\"true\">Sign Document</a>";
 const IMG_PREVIEW = "<img src=\"<url>\" height=\"100\" width=\"80\" class=\"img-thumbnail\">"
-const FILTER_ITEM = "<a class=\"dropdown-item\" href=\"#\"><text></a>"
 
 function loadDocuments () {
     const request = new XMLHttpRequest();
@@ -89,13 +88,22 @@ function populateFilterDropdown(json) {
     
     const menu = document.querySelector("#dropdown-menu");
     
-    let innerHTML = "";
     json.forEach(element => {
-        const item = FILTER_ITEM.replace("<text>", element.name)
-        innerHTML += item;
+        const item = document.createElement("a");
+        item.textContent = element.name;
+        item.classList.add("dropdown-item");
+        
+        item.addEventListener("click", function(event){
+            filterDocuments(element);
+        });
+
+        menu.appendChild(item);
     });
 
-    menu.innerHTML = innerHTML;
+}
+
+function filterDocuments(filter) {
+    // TODO: filter documents according to selected filter element
 }
 
 document.addEventListener("DOMContentLoaded", () => {
