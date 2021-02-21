@@ -15,6 +15,9 @@
   border: 10px solid #e3e5e8;
   padding: 25px;
 }
+#confirmation-modal-text {
+  font-size: large;
+}
 .card {
     margin-top: 15%;
     margin-left: 20%;

@@ -25,6 +25,7 @@
 				<img class="card-img-top" src="../img/contract2.png" alt="Card image">
 				<div class="card-body">
 					<h4 id="doc-name" class="card-title">XXXX</h4>
+					<h5 id="doc-owner" class="card-text">XXXX</h5>
 					<h5 id="doc-date" class="card-text">XXXX</h5>
 					<br>
 					<a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#confirmation-modal" >Sign Document</a>
@@ -32,29 +33,32 @@
 			</div>
 		</div>
 
-		
 		<!-- Modal -->
 		<div class="modal fade" id="confirmation-modal" tabindex="-1" role="dialog" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-				<h5 class="modal-title"><b>Confirm Signing Document ?</b></h5>
+				<h5 id="confirmation-modal-title" class="modal-title"><b>Confirm Signing Document ?</b></h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 				</div>
 				<div class="modal-body" >
-					<p id="confirmation-modal-text">
+					<div style="display: flex; justify-content: center;">
+						<img style="display: none;" id="confirmation-modal-anim" height="80" width="80" src="https://media.giphy.com/media/tf9jjMcO77YzV4YPwE/giphy.gif">
+					</div>
+					<p style="font-weight: normal;" id="confirmation-modal-text">
 						...
 					</p>
-					<p> Please click CONFIRM to continue. </p>
+					
 					<div class="progress-bar" id="progressBar">
 						<span style="width: 40%"></span>
 					</div>
+					
 				</div>
-					<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary" id="confirmation-modal-btn">Confirm</button>
+				<div class="modal-footer">
+					<button id="confirmation-modal-btn-close" type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Close</button>
+					<button id="confirmation-modal-btn-success" type="button" class="btn btn-primary btn-lg" id="confirmation-modal-btn">Confirm</button>
 				</div>
 			</div>
 			</div>
