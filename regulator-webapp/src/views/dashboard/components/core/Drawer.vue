@@ -5,8 +5,7 @@
         :dark="barColor !== 'rgba(228, 226, 226, 1), rgba(255, 255, 255, 0.7)'"
         :expand-on-hover="expandOnHover"
         :right="$vuetify.rtl"
-        :src="barImage"
-        mobile-break-point="960"
+        mobile-breakpoint="960"
         app
         width="260"
         v-bind="$attrs"
@@ -56,20 +55,8 @@
                 <base-item v-else :key="`item-${i}`" :item="item" />
             </template>
 
-            <!-- Style cascading bug  -->
-            <!-- https://github.com/vuetifyjs/vuetify/pull/8574 -->
             <div />
         </v-list>
-
-        <!-- <template v-slot:append>
-      <base-item
-        :item="{
-          title: $t('upgrade'),
-          icon: 'mdi-package-up',
-          to: '/upgrade',
-        }"
-      />
-    </template> -->
     </v-navigation-drawer>
 </template>
 
@@ -95,35 +82,40 @@ export default {
                 to: "/",
             },
             {
+                icon: "mdi-alert",
+                title: "Anomalous Cases",
+                to: "/pages/anomaly",
+            },
+            {
                 icon: "mdi-account",
                 title: "user",
                 to: "/pages/user",
             },
-            {
-                title: "rtables",
-                icon: "mdi-clipboard-outline",
-                to: "/tables/regular-tables",
-            },
-            {
-                title: "typography",
-                icon: "mdi-format-font",
-                to: "/components/typography",
-            },
-            {
-                title: "icons",
-                icon: "mdi-chart-bubble",
-                to: "/components/icons",
-            },
-            {
-                title: "google",
-                icon: "mdi-map-marker",
-                to: "/maps/google-maps",
-            },
-            {
-                title: "notifications",
-                icon: "mdi-bell",
-                to: "/components/notifications",
-            },
+            // {
+            //     title: "rtables",
+            //     icon: "mdi-clipboard-outline",
+            //     to: "/tables/regular-tables",
+            // },
+            // {
+            //     title: "typography",
+            //     icon: "mdi-format-font",
+            //     to: "/components/typography",
+            // },
+            // {
+            //     title: "icons",
+            //     icon: "mdi-chart-bubble",
+            //     to: "/components/icons",
+            // },
+            // {
+            //     title: "google",
+            //     icon: "mdi-map-marker",
+            //     to: "/maps/google-maps",
+            // },
+            // {
+            //     title: "notifications",
+            //     icon: "mdi-bell",
+            //     to: "/components/notifications",
+            // },
         ],
     }),
 
@@ -167,12 +159,12 @@ export default {
 @import '~vuetify/src/styles/tools/_rtl.sass'
 
 #core-navigation-drawer
-  .v-list-group__header.v-list-item--active:before
+.v-list-group__header.v-list-item--active:before
     opacity: .24
 
     .v-list-item
-      &__icon--text,
-      &__icon:first-child
+    &__icon--text,
+    &__icon:first-child
         justify-content: center
         text-align: center
         width: 20px
@@ -186,20 +178,20 @@ export default {
         margin-right: 12px !important
 
     .v-list--dense
-      .v-list-item
+    .v-list-item
         &__icon--text,
         &__icon:first-child
-          margin-top: 10px
+            margin-top: 10px
 
     .v-list-group--sub-group
-      .v-list-item
+    .v-list-item
         +ltr()
         padding-left: 8px
 
         +rtl()
         padding-right: 8px
 
-      .v-list-group__header
+    .v-list-group__header
         +ltr()
         padding-right: 0
 
@@ -207,15 +199,15 @@ export default {
         padding-right: 0
 
         .v-list-item__icon--text
-          margin-top: 19px
-          order: 0
+            margin-top: 19px
+            order: 0
 
         .v-list-group__header__prepend-icon
-          order: 2
+            order: 2
 
-          +ltr()
-          margin-right: 8px
+            +ltr()
+            margin-right: 8px
 
-          +rtl()
-          margin-left: 8px
+            +rtl()
+            margin-left: 8px
 </style>

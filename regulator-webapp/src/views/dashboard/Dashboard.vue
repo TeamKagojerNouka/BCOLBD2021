@@ -43,9 +43,7 @@
                         Total Credit Given
                     </h4>
 
-                    <p class="d-inline-flex font-weight-light ml-2 mt-1">
-                        Some text
-                    </p>
+                    <p class="d-inline-flex ml-2 mt-1">Some text</p>
 
                     <template v-slot:actions>
                         <v-icon class="mr-1" small> mdi-clock-outline </v-icon>
@@ -95,7 +93,7 @@
                         Total Credit Paid Back
                     </h4>
 
-                    <p class="d-inline-flex font-weight-light ml-2 mt-1">
+                    <p class="d-inline-flex ml-2 mt-1">
                         <!-- <v-icon color="green" small> mdi-arrow-up </v-icon>
                         <span class="green--text">55%</span>&nbsp; increase in
                         today's sales -->
@@ -150,7 +148,7 @@
                         Credit Ratio
                     </h3>
 
-                    <p class="d-inline-flex font-weight-light ml-2 mt-1">
+                    <p class="d-inline-flex ml-2 mt-1">
                         Credit taken / credit rating
                     </p>
 
@@ -195,7 +193,7 @@
                     sub-text="Last 24 hours"
                 />
             </v-col>
-
+            <!-- 
             <v-col cols="12" md="6">
                 <base-material-card color="warning" class="px-5 py-3">
                     <template v-slot:heading>
@@ -276,7 +274,7 @@
                         </v-tab-item>
                     </v-tabs-items>
                 </base-material-card>
-            </v-col>
+            </v-col> -->
         </v-row>
     </v-container>
 </template>
