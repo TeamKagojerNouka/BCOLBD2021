@@ -1,6 +1,13 @@
 
 .table-dark {
     background-color: #222222;
+    color: #fff;
+}
+tr:hover {
+    background-color: whitesmoke;
+}
+thead tr:hover {
+    background-color: initial;
 }
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
     color: #fff;
