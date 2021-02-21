@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('bank/', include('banks.urls')),
     path('issuer/', include('issuers.urls')),
 ]
 

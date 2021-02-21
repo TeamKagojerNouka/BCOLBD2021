@@ -1,8 +1,8 @@
 from rest_framework.serializers import ModelSerializer
-from .models import Document
+from .models import Credit
 
 
-class DocumentSerializer(ModelSerializer):
+class CreditSerializer(ModelSerializer):
     class Meta:
-        model = Document
+        model = Credit
         fields = '__all__'
