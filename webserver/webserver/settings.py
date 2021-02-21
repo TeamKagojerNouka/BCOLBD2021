@@ -25,7 +25,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
 
-    'documents',
+    'banks',
+    'issuers',
+    'regulator'
 ]
 
 MIDDLEWARE = [
