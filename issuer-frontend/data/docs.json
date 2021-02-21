@@ -4,14 +4,16 @@
         "name": "XYZ Licence Agreement",
         "url": "detail.html",
         "preview": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfzVUmlHenNZejz5-xxWnD-7g-dll--y8wGA&usqp=CAU",
-        "date": "20/01/1999"
+        "date": "20/01/1999",
+        "owner": "Zunaed Karim Sifat"
     },
     {
         "id": 213659,
         "name": "ABC Licence Agreement",
         "url": "detail.html",
         "preview": "https://image.slidesharecdn.com/domainlicensingagreementsample-131004123137-phpapp02/95/domain-licensing-agreement-sample-1-638.jpg?cb=1380889922",
-        "date": "20/01/1999"
+        "date": "20/01/1999",
+        "owner": "Tahmeed Tareq"
     }
 
 ]

@@ -23,3 +23,73 @@
     margin-left: 6%;
     width: 15%;
 }
+
+.progress-bar {
+    background-color: honeydew;
+    height: 32px;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 1px;
+    /*box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;*/
+    display: none;
+  }
+
+.progress-bar span {
+  display: inline-block;
+  height: 100%;
+  border-radius: 3px;
+  float: left;
+  background-image: linear-gradient(
+                      135deg,
+                      rgba(255, 255, 255, .15) 25%,
+                      transparent 25%,
+                      transparent 50%,
+                      rgba(255, 255, 255, .15) 50%,
+                      rgba(255, 255, 255, .15) 75%,
+                      transparent 75%,
+                      transparent);
+
+  transition: width .4s ease-in-out;
+  background-color: green;
+  /*box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;*/
+  /*animation: animate-stripes 3s linear infinite;*/
+  box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset,
+              0 -5px 5px rgba(255, 255, 255, .7) inset;
+  animation: animate-glow 1.5s ease-out infinite, animate-stripes 3s linear infinite;
+}
+
+
+@keyframes animate-stripes {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 60px 0;
+    }
+}
+
+@keyframes animate-glow {
+  0% {
+    box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset,
+                0 -5px 5px rgba(255, 255, 255, .7) inset;
+  }
+  50% {
+    box-shadow: 0 5px 5px rgba(255, 255, 255, .3) inset,
+                0 -5px 5px rgba(255, 255, 255, .3) inset;
+  }
+  100% {
+    box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset,
+                0 -5px 5px rgba(255, 255, 255, .7) inset;
+  }
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid green;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 2s linear infinite;
+    display: none;
+  }
