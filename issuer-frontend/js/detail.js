@@ -39,7 +39,7 @@ async function animateProgressBar() {
     pb.hide();
     const anim = document.getElementById("confirmation-modal-anim");
     anim.style["display"] = "flex";
-    document.getElementById("confirmation-modal-text").innerHTML = "<b>You have successfully signed this document.</b> <br> Document Hash: <b>763a8dad0ab01d89ce581d74e2f96d0debe8e018</b>";
+    document.getElementById("confirmation-modal-text").innerHTML = "<b>You have successfully signed this document.</b> <br> Document Hash: <b>ea9fc4f4-10af-44b9-a061-bcd19144b9be</b>";
     document.getElementById("confirmation-modal-title").innerHTML = "<b>Signing Complete</b>";
     document.getElementById("confirmation-modal-btn-success").style["display"] = "none";
     document.getElementById("confirmation-modal-btn-close").textContent = "Done";

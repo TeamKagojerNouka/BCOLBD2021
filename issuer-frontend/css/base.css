@@ -8,6 +8,15 @@ html * {
     font-weight: bold;
 }
 
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
 .flex-container {
     display: flex;
 }
@@ -22,7 +31,7 @@ html * {
 }
 
 .navbar {
-    background-color: whitesmoke;
+    background-color: #fbe39b;
     color: #fff;
     border-bottom: 1px solid #000;
 }
@@ -32,12 +41,13 @@ html * {
     padding: 12px;
 }
 
-.nav-link {
-    color: #222;
+.nav-link,
+.nav-brand {
+    color: #394c53;
 }
 
 .nav-link:hover {
-    color: #000;
+    color: #222;
     font-weight: bold;
 }
 
