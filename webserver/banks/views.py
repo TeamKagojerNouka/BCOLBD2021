@@ -14,6 +14,10 @@ class CreditListCreateAPIView(ListCreateAPIView):
         if borrower is not None:
             queryset = queryset.filter(borrower=borrower)
 
+        document = self.request.query_params.get('document')
+        if document is not None:
+            queryset = queryset.filter(asset__hash=document)
+
         return queryset
 
 
