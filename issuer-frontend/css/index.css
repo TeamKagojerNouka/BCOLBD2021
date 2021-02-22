@@ -1,13 +1,35 @@
-.site-header {
-    padding: 20px 20px 20px 20px;
-    background-color: #222222;
-    color: honeydew;
-}
+
 .table-dark {
     background-color: #222222;
+    color: #fff;
+}
+tr:hover {
+    background-color: whitesmoke;
+}
+thead tr:hover {
+    background-color: initial;
 }
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
     color: #fff;
     background-color: #222222;
     border-color: #222222;
+}
+.btn-secondary {
+    background-color: #222222;
+}
+.dropdown {
+    float: right;
+}
+.dropdown-menu {
+    margin-right: 30%;
+}
+.dropdown-item {
+    font-weight: bold;
+    padding: 12px 12px;
+    text-align: left;
+    font-size: small;
+} 
+.dropdown-item:active {
+    color: #fff;
+    background-color: #222222;
 }

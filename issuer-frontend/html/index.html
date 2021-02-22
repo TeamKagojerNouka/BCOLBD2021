@@ -1,54 +1,85 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<head>
+	<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-   
-    <!-- Bootstrap CSS -->
+		<!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/index.css">
-    <title>Issuer</title>
-  </head>
-  <body>
-    <div>
-        <h1 class="site-header"><B>Issuer Dashboard<B></h1>
-    </div>  
-    <table id="docs-table" class="table table-hover text-center">
-        <thead class="table-dark">
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Date</th>
-            <th scope="col">Preview</th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="align-middle">1</td>
-                <td class="align-middle">XXXX</td>
-                <td class="align-middle">XXXX</td>
-                <td class="align-middle"><a href="https://www.google.com" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">View</a></td>
-                <td class="align-middle"><img src="https://lh3.googleusercontent.com/proxy/wtL6UERD2K7YJy1bYVhWRS9XV3aTimhpATlwjmLbBzEnYpdxI-HR3frCfqYplJ5Oy6C90ORHGedarGvA4EQO-TgHtsEhwXkvdohd0oFqYPQ" height="70" width="50"></td>
-            </tr>
-            <tr>
-                <td class="align-middle">2</td>
-                <td class="align-middle">XXXX</td>
-                <td class="align-middle">XXXX</td>
-                <td class="align-middle"><a href="https://www.google.com" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">View</a></td>
-                <td class="align-middle"><img src="https://d35fo82fjcw0y8.cloudfront.net/2020/02/27101747/requirements_doc_features_logo1.png" height="70" width="50"></td>
-            </tr>
-        </tbody>
-      </table>
+		<link rel="stylesheet" href="../css/base.css">
+		<link rel="stylesheet" href="../css/index.css">
+		<title>Issuer</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-sm">
+			<!-- Links -->
+			<div class="navbar-header mr-auto">
+				<h3 id="site-header" class="navbar-brand">Kagojer Nouka</h3>
+			</div>
+			<ul class="navbar-nav mx-auto">
+			  <li class="nav-item" style="background-color: inherit; color: #222;">
+				  <b>Good Morning,</b> Mr. Tahmeed Tareq
+			  </li>
+			</ul>
+			<ul class="navbar-nav ml-auto">
+			  <li class="nav-item">
+				<a class="nav-link" href="index.html">My Documents</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="scan.html" href="#">Scan a New Document</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Log out</a>
+			  </li>
+			</ul>
+		  
+		</nav>
 
-    <!-- Bootstrap required JS -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../js/index.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+		<table id="docs-table" class="table text-center">
+			<thead class="table-dark">
+				<tr>
+					<th scope="col" class="align-middle">ID</th>
+					<th scope="col" class="align-middle">Name</th>
+					<th scope="col" class="align-middle">Date</th>
+					<th scope="col" class="align-middle">Preview</th>
+          <th scope="col" class="align-middle">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-menu-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Filter By
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdown-menu-button" id="dropdown-menu">
+                <!-- <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Other Action</a> -->
+              </div>
+            </div>  
+          </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="align-middle">1</td>
+					<td class="align-middle">XXXX</td>
+					<td class="align-middle">XXXX</td>
+					<td class="align-middle"><a href="https://www.google.com" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">View</a></td>
+					<td class="align-middle"><img src="https://lh3.googleusercontent.com/proxy/wtL6UERD2K7YJy1bYVhWRS9XV3aTimhpATlwjmLbBzEnYpdxI-HR3frCfqYplJ5Oy6C90ORHGedarGvA4EQO-TgHtsEhwXkvdohd0oFqYPQ" height="70" width="50"></td>
+				</tr>
+				<tr>
+					<td class="align-middle">2</td>
+					<td class="align-middle">XXXX</td>
+					<td class="align-middle">XXXX</td>
+					<td class="align-middle"><a href="https://www.google.com" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">View</a></td>
+					<td class="align-middle"><img src="https://d35fo82fjcw0y8.cloudfront.net/2020/02/27101747/requirements_doc_features_logo1.png" height="70" width="50"></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<!-- Bootstrap required JS -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="../js/index.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</body>
 </html>

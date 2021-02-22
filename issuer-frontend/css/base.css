@@ -1,7 +1,11 @@
-.site-header {
-    padding: 20px 20px 20px 20px;
-    background-color: #222222;
-    color: honeydew;
+html *{
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif !important;
+}
+
+#site-header {
+    padding: 12px 32px;
+    color: #222;
+    font-weight: bold;
 }
 .flex-container {
     display: flex;
@@ -15,3 +19,21 @@
 .flex-child:first-child {
     margin-right: 20px;
 } 
+
+.navbar {
+    background-color: whitesmoke;
+    color: #fff;
+    border-bottom: 1px solid #000;
+}
+.nav-item {
+    background-color: #fff;
+    padding: 12px;
+}
+.nav-link {
+    color: #222;
+}
+
+.nav-link:hover {
+    color: #000;
+    font-weight: bold;
+}

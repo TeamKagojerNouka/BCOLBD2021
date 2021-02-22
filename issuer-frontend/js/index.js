@@ -67,6 +67,46 @@ function populateTable(json) {
     
 }
 
+function loadFilters() {
+    const request = new XMLHttpRequest();
+
+    request.open("get", "../data/filters.json");
+    request.onload = () => {
+        try {
+            const json = JSON.parse(request.responseText);
+            populateFilterDropdown(json);
+        }
+        catch(e) {
+            console.warn("Could not fetch data !!");
+        }
+    };
+
+    request.send();
+}
+
+function populateFilterDropdown(json) {
+    
+    const menu = document.querySelector("#dropdown-menu");
+    
+    json.forEach(element => {
+        const item = document.createElement("a");
+        item.textContent = element.name;
+        item.classList.add("dropdown-item");
+        
+        item.addEventListener("click", function(event){
+            filterDocuments(element);
+        });
+
+        menu.appendChild(item);
+    });
+
+}
+
+function filterDocuments(filter) {
+    // TODO: filter documents according to selected filter element
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     loadDocuments();
+    loadFilters();
 })
