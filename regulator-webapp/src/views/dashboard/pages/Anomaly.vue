@@ -2,81 +2,101 @@
     <v-container id="anomaly" fluid tag="section">
         <v-row>
             <v-col cols="12" md="8">
-                <v-container v-for="(anomaly, index) in anomalies" :key="index">
-                    <!-- <base-material-card color="#E91E63"> -->
-                    <base-material-card color="info">
-                        <template v-slot:heading>
-                            <div class="display-2 font-weight-medium">
-                                TITLE
-                                <!-- {{ anomaly.name }} -->
-                            </div>
+                <base-material-card
+                    v-for="(anomaly, index) in anomalies"
+                    :key="index"
+                    color="info darken-1"
+                >
+                    <template v-slot:heading>
+                        <div class="display-2 font-weight-regular">
+                            {{ anomaly.name }} · {{ anomaly.bank }}
+                        </div>
 
-                            <div class="subtitle-1">subtitle</div>
-                        </template>
+                        <div class="subtitle-1">
+                            {{ anomaly.date }}
+                        </div>
+                    </template>
 
-                        <template v-slot:actions>
-                            <v-row>
-                                <!-- <v-col cols="5">
-                                    <v-chip
-                                        v-for="(
-                                            keyword, index
-                                        ) in anomaly.keywords"
-                                        :key="index"
-                                        :color="colors[index]"
-                                        label
-                                        text-color="white"
-                                        class="ma-1"
-                                        >{{ keyword }}</v-chip
+                    <template v-slot:actions>
+                        <v-row>
+                            <v-col cols="12">
+                                <v-card-actions class="pl-0 pt-0 justify-start">
+                                    <v-icon color="#E91E63" class="mr-1"
+                                        >mdi-credit-card-minus</v-icon
                                     >
-                                </v-col> -->
-                                <v-col cols="12">
-                                    <v-card-actions
-                                        class="pl-0 pt-0 justify-start"
+                                    <span>{{ anomaly.credit_given }} Tk</span>
+
+                                    <v-divider
+                                        vertical
+                                        class="ml-4 mr-2"
+                                    ></v-divider>
+
+                                    <v-icon color="success" class="mr-1"
+                                        >mdi-cash-multiple</v-icon
                                     >
-                                        <v-icon color="#E91E63" class="mr-1"
-                                            >mdi-credit-card-minus</v-icon
-                                        >
-                                        <span>{{ upward_trend }} Tk</span>
+                                    <span>{{ anomaly.credit_owned }} Tk</span>
 
-                                        <v-divider
-                                            vertical
-                                            class="ml-4 mr-2"
-                                        ></v-divider>
+                                    <v-divider
+                                        vertical
+                                        class="ml-4 mr-2"
+                                    ></v-divider>
 
-                                        <v-icon color="success" class="mr-1"
-                                            >mdi-credit-card-plus</v-icon
-                                        >
-                                        <span>{{ downward_trend }} Tk</span>
-
-                                        <v-divider
-                                            vertical
-                                            class="ml-4 mr-2"
-                                        ></v-divider>
-
-                                        <v-icon color="info" class="mr-1"
-                                            >mdi-aspect-ratio</v-icon
-                                        >
-                                        <span>{{ ratio }}</span>
-                                    </v-card-actions>
-                                    <v-row class="justify-end">
-                                        <v-btn
-                                            color="purple lighten-4"
-                                            small
-                                            class="text--secondary font-weight-bold mb-5"
-                                        >
-                                            <v-icon small class="mr-1"
-                                                >mdi-details</v-icon
-                                            >View Details
-                                        </v-btn>
-                                    </v-row>
-                                </v-col>
-                            </v-row>
-                        </template>
-                    </base-material-card>
-                </v-container>
+                                    <v-icon color="info" class="mr-1"
+                                        >mdi-aspect-ratio</v-icon
+                                    >
+                                    <span>{{ anomaly.credit_ratio }}</span>
+                                </v-card-actions>
+                                <v-row class="justify-end">
+                                    <v-btn
+                                        color="#E91E63"
+                                        small
+                                        class="font-weight-bold mb-5"
+                                    >
+                                        <v-icon small class="mr-1"
+                                            >mdi-credit-card-search</v-icon
+                                        >Investigate
+                                    </v-btn>
+                                </v-row>
+                            </v-col>
+                        </v-row>
+                    </template>
+                </base-material-card>
             </v-col>
             <v-col cols="12" md="4">
-                <div>column</div>
+                <base-material-card v-for="(bank, index) in banks" :key="index">
+                    <template v-slot:heading>
+                        <div class="display-2 font-weight-regular">
+                            {{ bank.name }}
+                        </div>
+                    </template>
+                    <template v-slot:actions>
+                        <v-row>
+                            <v-col cols="12">
+                                <v-card-actions class="pl-0 pt-0 justify-start">
+                                    <v-icon color="#E91E63" class="mr-1"
+                                        >mdi-account-alert-outline</v-icon
+                                    >
+                                    <span>{{ bank.case }}</span>
+
+                                    <v-divider
+                                        vertical
+                                        class="ml-4 mr-2"
+                                    ></v-divider>
+
+                                    <v-icon color="info" class="mr-1"
+                                        >mdi-aspect-ratio</v-icon
+                                    >
+                                    <span>{{ bank.ratio }}</span>
+                                    <v-row class="justify-end">
+                                        <v-icon color="#E91E63"
+                                            >mdi-credit-card-search</v-icon
+                                        >
+                                    </v-row>
+                                </v-card-actions>
+                            </v-col>
+                        </v-row>
+                    </template>
+                </base-material-card>
             </v-col>
         </v-row>
     </v-container>
@@ -84,23 +104,14 @@
 
 <script>
 import anomalies from "@/data/anomaly";
+import banks from "@/data/bank";
+
 export default {
     data() {
         return {
             anomalies,
-            colors: ["primary", "secondary", "pink", "blue", "purple"],
+            banks,
         };
-    },
-    computed: {
-        upward_trend() {
-            return Math.round(Math.random() * 1000000);
-        },
-        downward_trend() {
-            return Math.round(Math.random() * 1000000);
-        },
-        ratio() {
-            return Math.random().toFixed(2);
-        },
     },
 };
 </script>
