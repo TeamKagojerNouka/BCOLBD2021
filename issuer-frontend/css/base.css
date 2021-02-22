@@ -1,5 +1,5 @@
-html *{
-    font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif !important;
+html * {
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif !important;
 }
 
 #site-header {
@@ -7,6 +7,7 @@ html *{
     color: #222;
     font-weight: bold;
 }
+
 .flex-container {
     display: flex;
 }
@@ -14,21 +15,23 @@ html *{
 .flex-child {
     flex: 1;
     border: 2px solid transparent;
-}  
+}
 
 .flex-child:first-child {
     margin-right: 20px;
-} 
+}
 
 .navbar {
     background-color: whitesmoke;
     color: #fff;
     border-bottom: 1px solid #000;
 }
+
 .nav-item {
     background-color: #fff;
     padding: 12px;
 }
+
 .nav-link {
     color: #222;
 }
@@ -36,4 +39,8 @@ html *{
 .nav-link:hover {
     color: #000;
     font-weight: bold;
+}
+
+.nav-item {
+    background-color: inherit;
 }

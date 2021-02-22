@@ -1,52 +1,60 @@
 <!doctype html>
 <html lang="en">
-	<head>
-	<!-- Required meta tags -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link rel="stylesheet" href="../css/base.css">
-		<link rel="stylesheet" href="../css/detail.css">
-		<title>Document Detail</title>
-	</head>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<body>
-		<nav class="navbar navbar-expand-sm">
-			<!-- Links -->
-			<div class="navbar-header">
-				<h4 id="site-header" class="navbar-brand">Good Morning, <b>Issuer</b> Mr. Tahmeed Tareq</h4>
-			</div>
-			<ul class="navbar-nav ml-auto">
-			  <li class="nav-item">
-				<a class="nav-link" href="index.html">My Documents</a>
-			  </li>
-			  <li class="nav-item active">
-				<a class="nav-link" href="#">Scan a New Document</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="#">Log out</a>
-			  </li>
-			</ul>
-		  
-		</nav>
-		
-		<div class="camera">
-            <video id="video">Video stream not available.</video>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/detail.css">
+    <title>Document Detail</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm">
+        <!-- Links -->
+        <div class="navbar-header mr-auto">
+            <h3 id="site-header" class="navbar-brand">Kagojer Nouka</h3>
         </div>
-        <div><button id="startbutton">Take photo</button></div>
-        <canvas id="canvas"></canvas>
-        <!-- <div class="output">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item" style="background-color: inherit; color: #222;">
+                <b>Good Morning,</b> Mr. Tahmeed Tareq
+            </li>
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">My Documents</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Scan a New Document</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Log out</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <div class="camera">
+        <video id="video">Video stream not available.</video>
+    </div>
+    <div><button id="startbutton">Take photo</button></div>
+    <canvas id="canvas"></canvas>
+    <!-- <div class="output">
             <img id="photo" alt="The screen capture will appear in this box.">
         </div> -->
-		
 
-		<!-- Bootstrap required JS -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="../js/scan.js"></script>
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	</body>
+
+    <!-- Bootstrap required JS -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/scan.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
 </html>
