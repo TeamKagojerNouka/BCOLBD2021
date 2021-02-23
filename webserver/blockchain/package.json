@@ -1,0 +1,14 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "Blockchain SDK code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zunaedsifat",
+  "license": "ISC",
+  "dependencies": {
+    "capitalize": "^2.0.3"
+  }
+}

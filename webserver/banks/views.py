@@ -2,6 +2,7 @@ from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIV
 from rest_framework.permissions import AllowAny
 from .models import Credit
 from .serializers import CreditSerializer
+from webserver.utils import run_script
 
 
 class CreditListCreateAPIView(ListCreateAPIView):
@@ -13,6 +14,10 @@ class CreditListCreateAPIView(ListCreateAPIView):
         borrower = self.request.query_params.get('borrower')
         if borrower is not None:
             queryset = queryset.filter(borrower=borrower)
+
+        document = self.request.query_params.get('document')
+        if document is not None:
+            queryset = queryset.filter(asset__hash=document)
 
         return queryset
 
