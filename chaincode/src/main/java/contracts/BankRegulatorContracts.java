@@ -1,7 +1,6 @@
 package contracts;
 
 import models.Credit;
-import models.Document;
 import org.hyperledger.fabric.contract.Context;
 import org.hyperledger.fabric.contract.annotation.*;
 import org.hyperledger.fabric.shim.ChaincodeException;
