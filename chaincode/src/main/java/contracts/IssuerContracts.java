@@ -51,7 +51,7 @@ public class IssuerContracts implements ContractInterface {
     }
 
     @Transaction()
-    public Document createDocument(final Context ctx, final int issuer_id, final int owner_id, final String hash) {
+    public Document addDocument(final Context ctx, final int issuer_id, final int owner_id, final String hash) {
 
         ChaincodeStub stub = ctx.getStub();
 
