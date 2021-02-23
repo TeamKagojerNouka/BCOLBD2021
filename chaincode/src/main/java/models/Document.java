@@ -19,18 +19,29 @@ public final class Document {
 */
 
     @Property()
-    private final int issuerId;
+    private final int issuer_id;
 
     @Property()
-    private final int ownerId;
+    private final int owner_id;
 
     @Property()
     private final String hash;
 
+    public int getIssuerId() {
+        return issuer_id;
+    }
 
-    public Document(int issuerId, int ownerId, String hash) {
-        this.issuerId = issuerId;
-        this.ownerId = ownerId;
+    public int getOwnerId() {
+        return owner_id;
+    }
+
+    public String getHash() {
+        return hash;
+    }
+
+    public Document(int issuer_id, int owner_id, String hash) {
+        this.issuer_id = issuer_id;
+        this.owner_id = owner_id;
         this.hash = hash;
     }
 
@@ -40,12 +51,12 @@ public final class Document {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Document document = (Document) o;
-        return issuerId == document.issuerId && ownerId == document.ownerId && Objects.equals(hash, document.hash);
+        return issuer_id == document.issuer_id && owner_id == document.owner_id && Objects.equals(hash, document.hash);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(issuerId, ownerId, hash);
+        return Objects.hash(issuer_id, owner_id, hash);
     }
 
     @Override

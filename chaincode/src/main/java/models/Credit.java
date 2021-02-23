@@ -18,26 +18,50 @@ public final class Credit {
     }
 */
     @Property()
-    public final int bankId;
+    public final int bank_id;
 
     @Property()
-    public final int branchId;
+    public final int branch_id;
 
     @Property()
-    public final String documentHash;
+    public final String document_hash;
 
     @Property()
-    public final long paybackDate;
+    public final long payback_date;
 
     @Property()
-    public final int paidAmount;
+    public final float amount;
 
-    public Credit(int bankId, int branchId, String documentHash, long paybackDate, int paidAmount) {
-        this.bankId = bankId;
-        this.branchId = branchId;
-        this.documentHash = documentHash;
-        this.paybackDate = paybackDate;
-        this.paidAmount = paidAmount;
+    @Property()
+    public final float paid_amount;
+
+    public int getBankId() {
+        return bank_id;
+    }
+
+    public int getBranchId() {
+        return branch_id;
+    }
+
+    public String getDocumentHash() {
+        return document_hash;
+    }
+
+    public long getPaybackDate() {
+        return payback_date;
+    }
+
+    public float getPaidAmount() {
+        return paid_amount;
+    }
+
+    public Credit(int bank_id, int branch_id, String document_hash, long payback_date, float amount, float paid_amount) {
+        this.bank_id = bank_id;
+        this.branch_id = branch_id;
+        this.document_hash = document_hash;
+        this.payback_date = payback_date;
+        this.paid_amount = paid_amount;
+        this.amount = amount;
     }
 
     @Override
@@ -45,11 +69,11 @@ public final class Credit {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Credit credit = (Credit) o;
-        return bankId == credit.bankId && branchId == credit.branchId && Objects.equals(documentHash, credit.documentHash);
+        return bank_id == credit.bank_id && branch_id == credit.branch_id && Objects.equals(document_hash, credit.document_hash);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(bankId, branchId, documentHash);
+        return Objects.hash(bank_id, branch_id, document_hash);
     }
 }
