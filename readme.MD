@@ -73,6 +73,8 @@ Our system is not altering the current methodologies followed by our partners, i
 
 On the other hand most banks have some kind of existing legacy systems that they internally use to manage their workflow and record accounts, loans, transactions, credit history etc. They would have to update the system to record a transaction only after it has been accepted through consensus by the blockchain. They can interact with the blockchain using our API and only provide some necessary credit data determined by the government and then continue their regular workflow.
 
+![Architecture Diagram](docs/pictures/architecture.jpg)
+
 ## Governance
 
 In our system, we are digitally documenting assets like properties, insurance, business documents, etc. But the issuers are already keeping track of these data. As the concerning issuers are already reliably keeping record of the assets our model doesn’t require them to do anything more than just to keep the records digitally. We can also rely on them to represent assets faithfully and consistently on a blockchain by introducing members for oversight like regulators and credit ratings agencies.
@@ -105,10 +107,22 @@ You can watch our [prototype video]() if you want to see what have done so far. 
 
 Firstly, we have a web application to facilitate asset documentation. The issuer will take a photo of the document, which they then drag and drop into the corresponding file input section in the website. In this way, any legal asset document can be uploaded & essentially digitized. Next, asset owners can view their documents in this section. Some basic information such as ID, name, date is shown here along with a small preview of the document. The documents which have already been signed have the signed status here. The rest of the documents can be digitally signed by clicking this button which will take the owner to the details of the respective document. In the details page, a full preview of the document is provided. After clicking “sign document”, a confirmation dialogue will appear. At the successful completion of the document signing process, a document hash is shown which now represents the document in the blockchain.
 
+![Document Uploading](docs/pictures/document.png)
+
+![Signing Document](docs/pictures/sign.png)
+
 ### Bank
 
 As almost all banks have their own existing systems, we provide APIs to integrate them with our system. When a person requests credit against an asset, he gives the corresponding hash to the bank. The bank makes a request to our server, and gets information about the document, and whether it is used in any other credits or not. If they agree to lending money, they let our system know that by making another POST request containing information about the credit. This data is used to create a unified credit history of the borrower, that the banks can use by requesting to the corresponding endpoint.
 
+![Verify Document](docs/pictures/verify_document.png)
+
+![Create Cerdit](docs/pictures/create_credit.png)
+
+![Credit History](docs/pictures/credit_history.png)
+
 ### Regulator
 
 We have a separate private web application for regulators where they can view crucial information regarding the current lending practices of banks. The dashboard contains weekly and daily statistics of credit ratio & the amount of credit given / paid back to the banks, which will help the regulators determine the percentage of defaults. There’s also a section for anomalous cases which is meant to help regulators find out potential irregularities. It shows individual transaction records of irregular cases as well as an overview of how the banks are performing in terms of giving credit to borrowers.
+
+![Regulator Dashboard](docs/pictures/regulator.png)
