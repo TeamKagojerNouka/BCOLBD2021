@@ -56,9 +56,9 @@ async function main() {
 			// await contract.submitTransaction('InitLedger');
 			// console.log('Transaction: InitLedgerr\n');
 
-			// result = await contract.evaluateTransaction('GetAllAssets');
-			// console.log('Transaction: GetAllAssets');
-			// console.log(`${prettyJSONString(result.toString())}\n`);
+			result = await contract.evaluateTransaction('GetAllAssets');
+			console.log('Transaction: GetAllAssets');
+			console.log(`${prettyJSONString(result.toString())}\n`);
 
 			// result = await contract.submitTransaction('CreateAsset', 'asset13', 'yellow', '5', 'Toma', '1300');
 			// console.log('Transaction: CreateAsset');
@@ -75,9 +75,9 @@ async function main() {
 			// await contract.submitTransaction('UpdateAsset', 'asset13', 'blue', '5', 'Tomoka', '350');
 			// console.log('Transaction: UpdateAsset\n');
 
-			result = await contract.evaluateTransaction('ReadAsset', 'asset1');
-			console.log('Transaction: ReadAsset');
-			console.log(`${prettyJSONString(result.toString())}\n`);
+			// result = await contract.evaluateTransaction('ReadAsset', 'asset1');
+			// console.log('Transaction: ReadAsset');
+			// console.log(`${prettyJSONString(result.toString())}\n`);
 
 			// try {
 			// 	console.log('Transaction: UpdateAsset [xfail]');
@@ -88,12 +88,21 @@ async function main() {
 			// 	console.log(`${error}\n`);
 			// }
 
-			await contract.submitTransaction('TransferAsset', 'asset1', 'Tom');
-			console.log('Transaction: TransferAsset\n');
+			// await contract.submitTransaction('TransferAsset', 'asset1', 'Tom');
+			// console.log('Transaction: TransferAsset\n');
 
-			result = await contract.evaluateTransaction('ReadAsset', 'asset1');
-			console.log('Transaction: ReadAsset');
-			console.log(`${prettyJSONString(result.toString())}\n`);
+			// result = await contract.evaluateTransaction('ReadAsset', 'asset1');
+			// console.log('Transaction: ReadAsset');
+			// console.log(`${prettyJSONString(result.toString())}\n`);
+
+
+			// console.log('Transaction: NewAsset\n');
+			// await contract.submitTransaction('NewAsset');
+
+			// result = await contract.evaluateTransaction('GetOwner', 'asset-1');
+			// console.log('Transaction: GetOwner(asset-1)');
+			// console.log(`${result}\n`);
+
 		} 
 		finally {
 			// disconnect from the gateway when the application is closing

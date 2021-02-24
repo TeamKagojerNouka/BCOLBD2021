@@ -147,6 +147,26 @@ class AssetTransfer extends Contract {
         return JSON.stringify(allResults);
     }
 
+    // MINE
+
+    async NewAsset(ctx) {
+        const asset = {
+            ID: 'asset-1',
+            Owner: 'Tahmeed',
+            Issuer: 'Land Registry',
+            Date: new Date(),
+            Status: 'Owned'
+        };
+
+        asset.docType = 'asset';
+        await ctx.stub.putState(asset.ID, Buffer.from(JSON.stringify(asset)));
+        console.info(`Asset ${asset.ID} initialized`);
+    }
+
+    async GetOwner(ctx, id) {
+        const assetJSON = await ctx.stub.getState(id); // get the asset from chaincode state
+        return `Owner: ${assetJSON.Owner}`;
+    }
 
 }
 
