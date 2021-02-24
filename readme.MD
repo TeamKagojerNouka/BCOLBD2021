@@ -126,3 +126,22 @@ As almost all banks have their own existing systems, we provide APIs to integrat
 We have a separate private web application for regulators where they can view crucial information regarding the current lending practices of banks. The dashboard contains weekly and daily statistics of credit ratio & the amount of credit given / paid back to the banks, which will help the regulators determine the percentage of defaults. There’s also a section for anomalous cases which is meant to help regulators find out potential irregularities. It shows individual transaction records of irregular cases as well as an overview of how the banks are performing in terms of giving credit to borrowers.
 
 ![Regulator Dashboard](docs/pictures/regulator.png)
+
+## Project Structure
+
+1. `docs/` contains various files submitted during the competetion.
+2. `fabric/` contains codes related to the blockchain.
+3. `issuer-frontend/` folder contains code regarding frontend.
+4. `regulator-webapp/` contains the frontend for regulator.
+5. `webserver/` contains the web server used to communicate with the blockchain and the frontends.
+
+## Installation Guide
+
+Please look at the seperate folders for information regarding how to run that specific project.
+
+## Team Members
+
+1. Tahmeed Tarek
+2. Kh. Ashiqur Rahman
+3. Priyeta Saha
+4. Md. Zunaed Karim
