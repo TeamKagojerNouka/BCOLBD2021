@@ -2,6 +2,8 @@
 
 Being a rapidly growing economy one of the barriers that is holding Bangladesh back is the lack of a strong and sustainable financial system. Two core reasons which led us here are the lack of participation of general people specially from people of marginal and underprivileged communities and the lack of accountability in the lending process leading to corruptions and inefficiencies. We have proposed a solution to this problem, using Hyperledger Fabric blockchain, that brings all entities relevant to the lending process together, providing them with tools to do it more efficiently with lower risks and enabling collaboration to ensure collective benefit. As doing something through regulatory changes is often difficult and unsustainable, we designed our system with the goal of satisfying mutual interests and a fair incentive structure for all the parties. We primarily focus on documenting two sections of the lending process which are the credit history of a borrower and verifiable ownership of assets by bringing issuers, lenders, borrowers and regulators into our system increasing efficiency and accountability at each stage which ultimately leads to more sustainable economic growth.
 
+<<<<<<< HEAD
+
 ## Current Scenario
 
 Bangladesh is one of the fastest growing economies of the world right now. In order to sustain the growth, we need to ensure access to the services provided by a functioning and reliable financial sector to every citizen of the country. Although the banking sector provides various other services, the banks have two core jobs - helping people to safely save who have surplus money and lending that money to people who need it. Although there are issues with helping people save and invest their extra money in the economy, the lending process has some bigger issues that require more focused attention. Therefore, we will only focus on the lending process in this white paper.
@@ -138,6 +140,15 @@ We have a separate private web application for regulators where they can view cr
 ## Installation Guide
 
 Please look at the seperate folders for information regarding how to run that specific project.
+
+### Hyperledger
+
+```bash
+
+./network/network.sh up createChannel -c mychannel -ca
+./network/network.sh deployCC -ccn basic -ccp ../chaincode/ -ccl javascript
+
+```
 
 ## Team Members
 
