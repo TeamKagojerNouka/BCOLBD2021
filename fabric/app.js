@@ -55,6 +55,20 @@ async function main() {
 			// get command line arguments
 			var args = process.argv.slice(2);
 
+			// await contract.submitTransaction('InitData');
+			// console.log('Initialization done!');
+
+			switch (args[0]) {
+				case 'submit':
+					result = await contract.submitTransaction(args[1], ...args.slice(2));
+					console.log(`Transaction Complete!`);
+					break;
+				case 'evaluate':
+					result = await contract.evaluateTransaction(args[1], ...args.slice(2));
+					console.log(prettyJSONString(result.toString()));
+					break;
+			}
+
 			// await contract.submitTransaction('InitLedger');
 			// console.log('Transaction: InitLedgerr\n');
 
@@ -100,8 +114,8 @@ async function main() {
 			
 			// await contract.submitTransaction('NewAsset');
 
-			result = await contract.evaluateTransaction('GetOwner', args[0]);
-			console.log(result.toString());
+			// result = await contract.evaluateTransaction('GetOwner', args[0]);
+			// console.log(result.toString());
 		} 
 		finally {
 			// disconnect from the gateway when the application is closing

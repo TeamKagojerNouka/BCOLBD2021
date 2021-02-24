@@ -1,0 +1,19 @@
+  {
+    "credit_id": "2601815908",
+    "branch": "Sonali Bank",
+    "borrower": "Tahmeed",
+    "asset_id": "a9fc4f4-10af-44b9-a061-bcd19144b9be",
+    "amount_paid": 20000,
+    "amount_left": 30000,
+    "interest": 4.5,
+    "deadline": "2021-02-24T14:21:06.114Z",
+    "docType": "Credit"
+  },
+  {
+    "asset_id": "a9fc4f4-10af-44b9-a061-bcd19144b9be",
+    "owner": "Tahmeed",
+    "issuer": "Land Registry",
+    "status": "Owned",
+    "date": "2021-02-24T14:21:06.114Z",
+    "docType": "Asset"
+  }

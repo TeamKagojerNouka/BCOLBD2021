@@ -13,3 +13,12 @@ The web server application is in the server folder. Go to the folder to see spec
 ./network/network.sh deployCC -ccn basic -ccp ../chaincode/ -ccl javascript
 
 ```
+
+### Chaincode 
+
+- CreateAsset(ctx, asset_id, owner, issuer, status)
+- VerifyAsset(ctx, asset_id)
+  
+- CreateCredit(ctx, credit_id, bank, borrower, asset_id, amount_paid, amount_left, interest, deadline)
+- GetBorrowerHistory(ctx, borrower)
+- GetAllCredits(ctx)
