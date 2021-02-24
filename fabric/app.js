@@ -52,13 +52,15 @@ async function main() {
 			const contract = network.getContract(chaincodeName);
 			// store intermediate results
 			let result = null;
+			// get command line arguments
+			var args = process.argv.slice(2);
 
 			// await contract.submitTransaction('InitLedger');
 			// console.log('Transaction: InitLedgerr\n');
 
-			result = await contract.evaluateTransaction('GetAllAssets');
-			console.log('Transaction: GetAllAssets');
-			console.log(`${prettyJSONString(result.toString())}\n`);
+			// result = await contract.evaluateTransaction('GetAllAssets');
+			// console.log('Transaction: GetAllAssets');
+			// console.log(`${prettyJSONString(result.toString())}\n`);
 
 			// result = await contract.submitTransaction('CreateAsset', 'asset13', 'yellow', '5', 'Toma', '1300');
 			// console.log('Transaction: CreateAsset');
@@ -94,15 +96,12 @@ async function main() {
 			// result = await contract.evaluateTransaction('ReadAsset', 'asset1');
 			// console.log('Transaction: ReadAsset');
 			// console.log(`${prettyJSONString(result.toString())}\n`);
-
-
-			// console.log('Transaction: NewAsset\n');
+			
+			
 			// await contract.submitTransaction('NewAsset');
 
-			// result = await contract.evaluateTransaction('GetOwner', 'asset-1');
-			// console.log('Transaction: GetOwner(asset-1)');
-			// console.log(`${result}\n`);
-
+			result = await contract.evaluateTransaction('GetOwner', args[0]);
+			console.log(result.toString());
 		} 
 		finally {
 			// disconnect from the gateway when the application is closing

@@ -164,8 +164,9 @@ class AssetTransfer extends Contract {
     }
 
     async GetOwner(ctx, id) {
-        const assetJSON = await ctx.stub.getState(id); // get the asset from chaincode state
-        return `Owner: ${assetJSON.Owner}`;
+        const assetJSON = await ctx.stub.getState(id);
+        const asset = JSON.parse(assetJSON.toString());
+        return asset.Owner;
     }
 
 }
